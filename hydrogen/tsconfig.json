@@ -1,0 +1,39 @@
+{
+  "include": ["./**/*.d.ts", "./**/*.ts", "./**/*.tsx"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "module": "ES2022",
+    "target": "ES2022",
+    "strict": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "types": ["@shopify/oxygen-workers-types", "@types/bun"],
+    "paths": { "~/*": ["app/*"] },
+    "noEmit": true,
+    "plugins": [
+      {
+        "name": "gql.tada/ts-plugin",
+        "schemas": [
+          {
+            "name": "storefront",
+            "schema": "../node_modules/@shopify/hydrogen/dist/storefront.schema.json",
+            "tadaOutputLocation": "app/graphql-env.d.ts"
+          },
+          {
+            "name": "customer-account",
+            "schema": "../node_modules/@shopify/hydrogen/dist/customer-account.schema.json",
+            "tadaOutputLocation": "app/graphql-env.customer-account.d.ts"
+          }
+        ]
+      }
+    ]
+  }
+}

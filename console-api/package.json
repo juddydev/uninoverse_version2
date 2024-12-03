@@ -1,0 +1,16 @@
+{
+  "name": "console-api",
+  "scripts": {
+    "dev": "drizzle-kit generate && wrangler d1 migrations apply uninoverse --local && wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "typecheck": "tsc --noEmit",
+    "studio": "drizzle-kit studio --config drizzle.config.local.ts",
+    "d1:build": "drizzle-kit generate",
+    "d1:migrate": "wrangler d1 migrations apply uninoverse --local",
+    "d1:migrate:remote": "wrangler d1 migrations apply uninoverse --local"
+  },
+  "dependencies": {
+    "bcrypt-ts": "^5.0.2",
+    "drizzle-orm": "^0.33.0"
+  }
+}

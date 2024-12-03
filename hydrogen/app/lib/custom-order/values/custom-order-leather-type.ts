@@ -1,0 +1,17 @@
+export const customOrderLeatherType = {
+  baron: "baron",
+  boxCalf: "box-calf",
+  crocodileBack: "crocodile-back",
+  crocodileBelly: "crocodile-belly",
+  deerSkin: "deer-skin",
+  embossed01: "embossed-01",
+  embossed02: "embossed-02",
+  embossed03: "embossed-03",
+  embossed04: "embossed-04",
+  embossed05: "embossed-05",
+  kipskin: "kipskin",
+  ostrichSkin: "ostrich-skin",
+  scotchGrain: "scotch-grain",
+  suede: "suede",
+  waterproofCalf: "waterproof-calf",
+} as const

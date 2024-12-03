@@ -1,0 +1,12 @@
+#:schema ../node_modules/wrangler/config-schema.json
+
+name = "uninoverse-webhooks"
+compatibility_date = "2024-09-09"
+main = "index.ts"
+
+[observability]
+enabled = true
+
+[[routes]]
+pattern = "webhooks.uninoverse.dev"
+custom_domain = true

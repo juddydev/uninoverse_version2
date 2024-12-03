@@ -1,0 +1,37 @@
+{
+  "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
+  "formatter": {
+    "indentStyle": "space"
+  },
+  "linter": {
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUnusedImports": "error",
+        "noChildrenProp": "off"
+      },
+      "nursery": {
+        "useSortedClasses": "error"
+      },
+      "style": {
+        "useImportType": "off"
+      }
+    },
+    "ignore": [
+      "**/components/ui/**/*",
+      "**/app/hooks/use-toast.ts",
+      "hydrogen/alias"
+    ]
+  },
+  "organizeImports": {
+    "enabled": false
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded"
+    }
+  },
+  "files": {
+    "ignore": [".wrangler", "build", "graphql-env.d.ts", "graphql-env.*.d.ts"]
+  }
+}

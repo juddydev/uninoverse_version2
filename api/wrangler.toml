@@ -1,0 +1,17 @@
+#:schema ../node_modules/wrangler/config-schema.json
+
+name = "uninoverse-api"
+compatibility_date = "2024-09-09"
+main = "index.ts"
+
+[observability]
+enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "uninoverse"
+database_id = "5c7cbe8f-503a-4cb3-905e-1952510c4693"
+
+[[routes]]
+pattern = "api.uninoverse.dev"
+custom_domain = true

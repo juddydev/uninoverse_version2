@@ -1,0 +1,52 @@
+{
+  "name": "uninoverse",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --cwd hydrogen dev",
+    "format": "biome check . --fix --unsafe",
+    "typecheck": "bun run --cwd api typecheck && bun run --cwd console typecheck && bun run --cwd hydrogen typecheck && bun run --cwd webhooks typecheck"
+  },
+  "dependencies": {
+    "@auth/core": "^0.34.2",
+    "@hono/auth-js": "^1.0.10",
+    "@hono/valibot-validator": "^0.3.0",
+    "@shopify/admin-api-client": "^1.0.4",
+    "@shopify/shopify-api": "^11.6.0",
+    "@tanstack/react-form": "^0.36.0",
+    "@tanstack/react-query": "^5.56.2",
+    "@tanstack/valibot-form-adapter": "^0.35.0",
+    "class-variance-authority": "^0.7.0",
+    "date-fns": "^4.0.0",
+    "graphql": "^16.9.0",
+    "hono": "^4.6.10",
+    "lucide-react": "^0.441.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-use": "^17.5.1",
+    "valibot": "^0.41.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.2",
+    "@cloudflare/workers-types": "^4.20240821.1",
+    "@libsql/client": "^0.11.0",
+    "@shopify/cli": "^3.70.0",
+    "@types/bun": "^1.1.9",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.19",
+    "drizzle-kit": "^0.24.2",
+    "postcss": "^8.4.49",
+    "postcss-import": "^16.1.0",
+    "postcss-preset-env": "^10.1.0",
+    "tailwindcss": "^3.4.4",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.6.2",
+    "vite": "^5.1.0",
+    "vite-tsconfig-paths": "^4.2.1",
+    "wrangler": "^3.87.0"
+  },
+  "workspaces": ["api", "console", "console-api", "hydrogen", "webhooks"],
+  "volta": {
+    "node": "22.8.0"
+  }
+}
